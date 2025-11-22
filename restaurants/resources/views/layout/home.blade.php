@@ -77,6 +77,9 @@
                             </div>
                         </div>
                         <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
+                        <a href="{{route('login')}}" class="nav-item nav-link">Login</a>
+                        <a href="{{route('register')}}" class="nav-item nav-link">Register</a>
+                        
                     </div>
                     <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
                 </div>
@@ -99,6 +102,7 @@
                         <a class="btn btn-link" href="">Reservation</a>
                         <a class="btn btn-link" href="">Privacy Policy</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>
+
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>

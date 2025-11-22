@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\ProductController;
+
 
 Route::get('/', function () {
     return view('index');
@@ -34,16 +39,33 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+//route login
+// Route::get('/login', function () {
+//     return view('auth/login');
+// })->name('login');
+
+
+
+// Route register
+// Route::get('/register', function () {
+//     return view('register');
+// })->name('register');
+
+// Route::post('/logout', function () {
+//     Auth::logout();
+//     session()->invalidate();
+//     session()->regenerateToken();
+//     return redirect('/');
+// })->name('logout');
+
 ////////////////////////
 Route::get('/admin', function () {
     return view('admin/index');
 })->name('admin');
 
-Route::get('/admin/category', function () {
-    return view('admin//category/category-list');
-})->name('category');
+Route::get('/admin/category', [CategoryController::class, 'index'])->name('category');
 
 
-Route::get('/admin/product', function () {
-    return view('admin/product/product-list');
-})->name('product');
+Route::get('/admin/product', [ProductController::class, 'index'])->name('product');
+
+Auth::routes();

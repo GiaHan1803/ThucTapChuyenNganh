@@ -154,7 +154,7 @@
                             <li class="user-profile header-notification">
                                 <a href="#!">
                                     <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span>John Doe</span>
+                                    <span>Gia Han</span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
@@ -179,9 +179,10 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="auth-normal-sign-in.html">
-                                            <i class="ti-layout-sidebar-left"></i> Logout
-                                        </a>
+                                        <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                                                @csrf
+                                                <button type="submit" class="btn btn-link">Logout</button>
+                                            </form>
                                     </li>
                                 </ul>
                             </li>
@@ -198,7 +199,7 @@
                                 <div class="main-menu-header">
                                     <img class="img-40 img-radius" src="assets/images/avatar-4.jpg" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span>John Doe</span>
+                                        <span>Gia Han</span>
                                         <span id="more-details">UX Designer<i class="ti-angle-down"></i></span>
                                     </div>
                                 </div>
@@ -208,7 +209,11 @@
                                         <li class="more-details">
                                             <a href="#"><i class="ti-user"></i>View Profile</a>
                                             <a href="#!"><i class="ti-settings"></i>Settings</a>
-                                            <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                           <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                                                @csrf
+                                                <button type="submit" class="btn btn-link">Logout</button>
+                                            </form>
+
                                         </li>
                                     </ul>
                                 </div>
